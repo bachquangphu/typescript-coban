@@ -34,7 +34,7 @@ x = ["hello", 10];
 console.log(x);//[ 'hello', 10 ]
 
 
-//enum: là tập hợp các hàng số được đặt tên
+//enum: là tập hợp các hằng số được đặt tên
 enum trangThaiDonHang {
     ChoXacNhan,
     DaXacNhan,
