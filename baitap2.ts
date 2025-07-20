@@ -1,8 +1,9 @@
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
 //hàm kiểm tra tháng
+let qui2: Array<number> = [4, 5, 6];
 function kiemTraThang(thang: number): void {
-    if (thang > 12 || thang <= 0 || isNaN(thang) || !Number.isInteger(thang)) {
+    if (isNaN(thang) || !Number.isInteger(thang) || thang > 12 || thang <= 0) {
         throw new Error('Tháng là số thực trong khoảng từ 0-12, vui lòng kiểm tra lại');
     }
     switch (thang) {
@@ -40,11 +41,13 @@ function kiemTraThang(thang: number): void {
             console.log("Tháng Mười Một");
             break;
         default:
-            console.log("Tháng Hai");
+            console.log("Tháng Mười Hai");
             break;
     }
-    if (thang == 6 || thang == 5 || thang == 4) {
+    if (qui2.includes(thang)) {
         console.log("Là tháng thuộc quí 2");
+    } else {
+        console.log("Là tháng không thuộc quí 2")
     }
     console.log(thang);
 }

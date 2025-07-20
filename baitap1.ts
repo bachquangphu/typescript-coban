@@ -2,7 +2,7 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 // hàm nhập điểm 
 const nhapDiem = (monHoc: string, diem: number): number => {
-    if (diem > 10 || diem <= 0 || isNaN(diem)) {
+    if (isNaN(diem) || diem > 10 || diem <= 0) {
         throw new Error(`Điểm ${monHoc} số trong khoảng từ 0-10, vui lòng kiểm tra lại`);
     }
     return diem;
